@@ -11,10 +11,10 @@ const App = () => {
       <br></br>
       ------------------------------------
       <br></br>
-      <AddCalculator />
+      {/* <AddCalculator /> */}
     </div>
   );
-}
+};
 
 export default App;
 // When working on NumberBuilder, comment line 14.
