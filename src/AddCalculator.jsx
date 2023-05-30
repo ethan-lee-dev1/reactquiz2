@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const AddCalculator = () => {
+  let [total, setTotal] = useState(0);
 
-    return (
-        <>
-            <button>Add 1</button>
-            <button>Add 2</button>
-            <button>Add 3</button>
-            <br></br>
-            Total: 
-        </>
-    )
-}
+  const handleAddNum = (numToAdd) => {
+    setTotal((total += numToAdd));
+  };
+
+  return (
+    <>
+      <button onClick={() => handleAddNum(1)}>Add 1</button>
+      <button onClick={() => handleAddNum(2)}>Add 2</button>
+      <button onClick={() => handleAddNum(3)}>Add 3</button>
+      <br></br>
+      Total: {total}
+    </>
+  );
+};
